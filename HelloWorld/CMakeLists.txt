@@ -2,7 +2,20 @@
 cmake_minimum_required(VERSION 3.16.3)
 
 # 设置项目名
-project("HelloWorld")
+project(HelloWorld
+        LANGUAGES CXX
+        VERSION 0.2.3
+        DESCRIPTION "A cmake hello world."
+        HOMEPAGE_URL https://github.com/DeepinBlocks/learn-cmake)
+
+message("PROJECT_VERSION: ${PROJECT_VERSION}")
+message("PROJECT_VERSION_MAJOR: ${PROJECT_VERSION_MAJOR}") # 主版本号
+message("PROJECT_VERSION_MINOR: ${PROJECT_VERSION_MINOR}") # 次版本号
+message("PROJECT_VERSION_PATCH: ${PROJECT_VERSION_PATCH}") # 补丁版本号
+
+message("PROJECT_VERSION: ${${PROJECT_NAME}_VERSION}")
+message("PROJECT_SOURCE_DIR: ${PROJECT_SOURCE_DIR}")
+message("PROJECT_SOURCE_DIR: ${${PROJECT_NAME}_SOURCE_DIR}")
 
 # 相关变量
 # PROJECT_NAME：值是project里面的内容
